@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"  href="/static/cadrasto/css/cadastrado_aulo.css">
+    <title>escola</title>
+    
+  </head>
+  <body>
+    <h1>Cadastre Alunos</h1>
+
+    <form action="{% url 'ver_escola'%}" method="POST">{% csrf_token %}
+      <input type="Tex" name = "nome" placeholder="Digite seu Nome">
+      <br>
+      <br>
+      <input type="Tex" name = "sobrenome" placeholder="Digite seu sobrenome">
+      <input type="Tex" name = "email" placeholder="Digite seu Email">
+      <input type="Tex" name = "curso" placeholder="Digite seu Curso">
+      <br>
+      <br>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
